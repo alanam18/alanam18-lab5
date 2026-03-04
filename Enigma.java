@@ -1,7 +1,4 @@
 public class Enigma{
-    private Rotor inner;
-    private Rotor middle;
-    private Rotor outer;
 
     private String rotorInit[] = {"#GNUAHOVBIPWCJQXDKRYELSZFMT",
         "#EJOTYCHMRWAFKPUZDINSXBGLQV",
@@ -23,7 +20,15 @@ public class Enigma{
 
 
     public String decrypt(String message){        
-        //TODO
+        String result = "";
+        for(int i = 0; i < message.length(); i++){
+            int outerIdx = rotors[2].indexOf(message.charAt(i));
+            char middleChar = rotors[1].charAt(outerIdx);
+            int outerIdx2 = rotors[2].indexOf(middleChar);
+            result += rotors[0].charAt(outerIdx2);
+            rotate();
+        }
+        return result
     }
 
 
