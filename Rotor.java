@@ -13,7 +13,8 @@ public class Rotor {
     }
     
     public boolean rotate(){
-        //TODO
+        rotorValues = rotorValues.charAt(rotorValues.length() - 1) + rotorValues.substring(0, rotorValues.length() - 1);
+        return rotorValues.charAt(0) == startChar;
                
     }
     
