@@ -1,4 +1,7 @@
 public class Enigma{
+    private Rotor inner;
+    private Rotor middle;
+    private Rotor outer;
 
     private String rotorInit[] = {"#GNUAHOVBIPWCJQXDKRYELSZFMT",
         "#EJOTYCHMRWAFKPUZDINSXBGLQV",
