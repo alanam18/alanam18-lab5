@@ -34,7 +34,15 @@ public class Enigma{
 
     
     public String encrypt(String message){
-        //TODO
+    String result = "";
+    for(char ch : message.toCharArray()){
+        int innerIdx = rotors[0].indexOf(ch);
+        char outerChar = rotors[2].charAt(innerIdx);
+        int middleIdx = rotors[1].indexOf(outerChar);
+        result += rotors[2].charAt(middleIdx);
+        rotate();
+    }
+    return result;
     }
 
     
