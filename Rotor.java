@@ -19,11 +19,11 @@ public class Rotor {
     
 
     public int indexOf(char c){
-        //TODO
+        return rotorValues.indexOf(c);
     }
 
     public char charAt(int idx){
-        //TODO
+        return rotorValues.charAt(idx);
     }
 }
     
