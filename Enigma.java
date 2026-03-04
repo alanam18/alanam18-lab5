@@ -28,7 +28,7 @@ public class Enigma{
             result += rotors[0].charAt(outerIdx2);
             rotate();
         }
-        return result
+        return result;
     }
 
 
